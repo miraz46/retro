@@ -49,7 +49,7 @@
                 class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow gap-4"
               >
                 <li class="tooltip" data-tip="Home">
-                  <button class="btn rounded-full w-full border-stone-300 ">
+                  <button class="btn rounded-full w-full border-stone-300">
                     <img src="./images/Home.png" alt="" />
                   </button>
                 </li>
@@ -75,7 +75,7 @@
           <div class="navbar-end">
             <ul class="menu menu-horizontal px-1 hidden lg:flex gap-4 mr-3">
               <li class="tooltip" data-tip="Home">
-                <button class="btn rounded-full border-stone-300 ">
+                <button class="btn rounded-full border-stone-300">
                   <img src="./images/Home.png" alt="" />
                 </button>
               </li>
@@ -103,55 +103,85 @@
       </nav>
       <!-- Banner -->
       <div
-        class="hero min-h-[70vh] w-11/12 lg:w-4/5 mx-auto mt-3 rounded-3xl bg-[#12132D]"
-        style="
-          background-image: url(./images/bgbanner.png);
-        "
+        class="hero bg-base-200 min-h-[70vh] w-11/12 lg:w-4/5 mx-auto rounded-3xl bg-[#12132D]"
+        style="background-image: url(./images/bgbanner.png)"
       >
-        <div class="hero-overlay rounded-3xl"></div>
-        <div class="hero-content flex-col lg:flex-row justify-between gap-10">
-          <div class="text-center lg:text-left ">
-            <h1 class="text-6xl font-black text-white ">Welcome to the <br> <span class="bg-gradient-to-r from-[#797DFC] to-[#515497] text-transparent bg-clip-text">ReTro</span> Forum</h1>
-            <p class="py-6 text-white">Share your favorite opinion and win and wp forum coffee mug!</p>
+        <div class="hero-content flex-col lg:flex-row gap-56">
+          <div class="text-center text-white lg:text-left w-screen">
+            <h1 class="text-6xl font-black text-white leading-[86px]">
+              Welcome to the<br /><span
+                class="bg-gradient-to-r from-[#797DFC] to-[#515497] text-transparent bg-clip-text"
+                >ReTro</span
+              >
+              Forum
+            </h1>
+            <p class="py-6 text-white my-7">
+              Share your favorite opinion and win and wp <br />
+              forum coffee mug!
+            </p>
+            <label
+              class="input w-[80%] rounded-full input-bordered flex items-center gap-2 p-7"
+            >
+              <input type="text" class="grow" placeholder="Search" />
+              <button
+                class="btn h-fit px-10 bg-[#797DFC] text-white rounded-full"
+              >
+                Apply
+              </button>
+            </label>
           </div>
-          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl ">
+          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <form class="card-body">
               <div class="form-control">
-                <label class="label">
-                  <span class="label-text">Email</span>
+                <label class="label flex justify-between text-center">
+                  <p>Registered Users</p>
+                  <p>01</p>
                 </label>
-                <input
-                  type="email"
-                  placeholder="email"
-                  class="input input-bordered"
-                  required
-                />
-              </div>
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text">Password</span>
+                <label class="label flex justify-between text-center">
+                  <p>Forum</p>
+                  <p>05</p>
                 </label>
-                <input
-                  type="password"
-                  placeholder="password"
-                  class="input input-bordered"
-                  required
-                />
-                <label class="label">
-                  <a href="#" class="label-text-alt link link-hover"
-                    >Forgot password?</a
-                  >
+
+                <label class="label flex justify-between text-center">
+                  <p>Topics</p>
+                  <p>01</p>
                 </label>
-              </div>
-              <div class="form-control mt-6">
-                <button class="btn btn-primary">Login</button>
+                <label class="label flex justify-between text-center">
+                  <p>Replies</p>
+                  <p>01</p>
+                </label>
               </div>
             </form>
           </div>
         </div>
       </div>
     </header>
-    <main></main>
+    <main>
+      <!-- Let's Discuss -->
+      <div class="text-center">
+        <h2 class="font-black text-4xl mt-24">Let’s Discuss</h2>
+        <p class="my-6">
+          Yes, you can run unit tests and view the results directly within the
+          <br />
+          app. The integrated testing features allow for a streamlined .
+        </p>
+      </div>
+      <!-- All News -->
+      <div class="w-11/12 lg:w-4/5 mx-auto flex gap-5 justify-center">
+        <div id="all-news-section" class="flex-1">
+          
+        </div>
+        <div class="flex-1 p-6 bg-[#efefef] h-fit rounded-3xl">
+          <div class="flex justify-between">
+            <p class="font-bold text-xl">Title</p>
+            <div class="flex gap-3">
+              <img src="./images/check_5610944.png" class="w-6 h-6" alt="" />
+              <p>Mark as read (4)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer></footer>
     <script src="./js/utility.js"></script>
   </body>
