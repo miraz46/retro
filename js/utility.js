@@ -17,7 +17,7 @@ const allData = async () => {
             <h2 class="text-xl font-bold my-3">
               ${element.title}
             </h2>
-            <p class="pb-4 border-b-2 border-dashed border-[#92929b]">
+            <p class="pb-4 border-b-2 border-dashed border-[#92929b] ">
               ${element.description}
             </p>
             <div class="flex justify-between my-5">
@@ -61,6 +61,22 @@ function colorChange(colorElement, element) {
   }
 }
 
+let count = 0;
 function markAsRead(element) {
-  console.log(element);
+  const markAsReadSection = document.getElementById("mark-as-read-section");
+  const markAsReadCount = document.getElementById("mark-as-read-count");
+  count++;
+  console.log(count);
+  markAsReadCount.innerText = count;
+  const div = document.createElement("div");
+  div.innerHTML = `
+  <div class="flex justify-between my-5 bg-[#ffffff] p-5 rounded-3xl">
+              <p>${element.title}</p>
+              <div class="flex gap-3">
+                <img src="./images/eye.png" alt="" />
+                <p>${element.view_count}</p>
+              </div>
+            </div>
+  `;
+  markAsReadSection.appendChild(div);
 }

@@ -53,12 +53,12 @@
                     <img src="./images/Home.png" alt="" />
                   </button>
                 </li>
-                <li class="tooltip" data-tip="Tooltip">
+                <li class="tooltip" data-tip="Edit">
                   <button class="btn rounded-full w-full border-stone-300">
                     <img src="./images/Pen.png" alt="" />
                   </button>
                 </li>
-                <li class="tooltip" data-tip="People">
+                <li class="tooltip" data-tip="Add">
                   <button class="btn rounded-full w-full border-stone-300">
                     <img src="./images/People.png" alt="" />
                   </button>
@@ -79,12 +79,12 @@
                   <img src="./images/Home.png" alt="" />
                 </button>
               </li>
-              <li class="tooltip" data-tip="Tooltip">
+              <li class="tooltip" data-tip="Edit">
                 <button class="btn rounded-full border-stone-300">
                   <img src="./images/Pen.png" alt="" />
                 </button>
               </li>
-              <li class="tooltip" data-tip="People">
+              <li class="tooltip" data-tip="Add">
                 <button class="btn rounded-full border-stone-300">
                   <img src="./images/People.png" alt="" />
                 </button>
@@ -122,7 +122,7 @@
             <label
               class="input w-[80%] rounded-full input-bordered flex items-center gap-2 p-7"
             >
-              <input type="text" class="grow" placeholder="Search" />
+              <input id="news-category" type="text" class="grow text-black" placeholder="Search" />
               <button
                 class="btn h-fit px-10 bg-[#797DFC] text-white rounded-full"
               >
@@ -168,19 +168,43 @@
       </div>
       <!-- All News -->
       <div class="w-11/12 lg:w-4/5 mx-auto flex gap-5 justify-center">
-        <div id="all-news-section" class="flex-1">
-          
-        </div>
+        <!-- Left Side -->
+        <div id="all-news-section" class="flex-1"></div>
+        <!-- Right Side -->
         <div class="flex-1 p-6 bg-[#efefef] h-fit rounded-3xl">
           <div class="flex justify-between">
             <p class="font-bold text-xl">Title</p>
             <div class="flex gap-3">
               <img src="./images/check_5610944.png" class="w-6 h-6" alt="" />
-              <p>Mark as read (4)</p>
+              <p>Mark as read ( <span id="mark-as-read-count"></span> )</p>
+            </div>
+          </div>
+          <div id="mark-as-read-section"></div>
+        </div>
+      </div>
+      <!-- Join Our Forum -->
+      <div>
+        <div class="hero bg-base-200 min-h-[40vh] w-11/12 lg:w-4/5 mx-auto rounded-3xl bg-[#12132D] text-white my-16">
+          <div class="hero-content flex-col lg:flex-row-reverse gap-56">
+            <img
+              src="./images/joinforum.png"
+              class="max-w-sm rounded-lg shadow-2xl"
+            />
+            <div>
+              <h1 class="text-5xl font-bold">Join Our Forum</h1>
+              <p class="py-6">
+                Share your favorite opinion and win and wp forum coffee mug! Yes, you can <br> run unit tests and view the results directly within the app. 
+              </p>
+              <button class="btn btn-primary bg-[#797DFC] text-white rounded-3xl border-none px-4">Registered Now</button>
             </div>
           </div>
         </div>
       </div>
+      <!-- Latest Post -->
+       <div class="text-center">
+        <h1 class="my-4 font-black text-5xl">Latest Posts</h1>
+        <p>Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+       </div>
     </main>
     <footer></footer>
     <script src="./js/utility.js"></script>
