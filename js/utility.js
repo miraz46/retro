@@ -1,9 +1,10 @@
-const allData = async (inputValue) => {
+const allData = async (inputValue = "") => {
   const url = await fetch(
     `https://openapi.programming-hero.com/api/retro-forum/posts?category=${inputValue}`
   );
   const allNews = await url.json();
   const allNewsSection = document.getElementById("all-news-section");
+  allNewsSection.textContent = "";
   allNews.posts.forEach((element) => {
     const div = document.createElement("div");
     div.innerHTML = `
@@ -11,15 +12,16 @@ const allData = async (inputValue) => {
           <div class="indicator">
               <span  class="color-change indicator-item badge badge-success badge-error"></span>
               <img  src="${element.image}" class="h-16 w-16 rounded-lg" alt="" />
-            </div>
-          <div>
+          </div>
+          <div class="w-full">
             <p>#${element.category} Author: ${element.author.name}</p>
             <h2 class="text-xl font-bold my-3">
               ${element.title}
             </h2>
-            <p class="pb-4 border-b-2 border-dashed border-[#92929b] ">
+            <p class="pb-4  ">
               ${element.description}
             </p>
+            <div class="border-b-2 border-dashed border-[#92929b]"> </div>
             <div class="flex justify-between my-5">
               <div class="flex gap-6">
                 <div class="flex gap-2">
@@ -58,7 +60,8 @@ function getNewsTopic() {
   if (inputValue === "coding" || "music" || "comedy") {
     allData(inputValue);
   } else {
-    allData((inputValue = ""));
+    const blank = "";
+    allData(blank);
   }
 }
 
